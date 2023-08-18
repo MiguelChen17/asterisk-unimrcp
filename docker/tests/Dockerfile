@@ -1,4 +1,4 @@
-FROM amd64/ubuntu:20.04
+FROM amd64/ubuntu:18.04
 
 RUN apt-get update && \
     apt-get -y install \
@@ -42,4 +42,4 @@ RUN chmod +x /opt/test-script.sh /opt/sip-caller.py
 
 ENTRYPOINT ["/opt/test-script.sh", "all"]
 
-LABEL modules="ubuntu:20.04,python3,sipsimple"
+LABEL modules="ubuntu:18.04,python3,sipsimple"
