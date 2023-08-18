@@ -1,5 +1,5 @@
 version: '3.9'
-
+# This is a comment 1
 networks:
   default:
     ipam:
@@ -8,7 +8,7 @@ networks:
         gateway: ${ASTERISK_SUBNET}.1
     name: asterisk_test
     driver: bridge
-
+# This is a comment 2
 services:
   asterisk-test:
     profiles: ["test"]
@@ -47,7 +47,7 @@ services:
       cp -r /src/docker/tests/res/etc / &&
       cp -r /src/docker/tests/res/usr / &&
       /usr/sbin/asterisk -vvvdddf -T -p"
-
+# This is a comment 3
 volumes:
   log:
   cache:
